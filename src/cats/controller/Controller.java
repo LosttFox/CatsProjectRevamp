@@ -1,7 +1,10 @@
 package cats.controller;
 
+import cats.model.ShelterCats;
+
 public class Controller
 {
+	
 	public Controller()
 	{
 		
@@ -9,6 +12,6 @@ public class Controller
 	
 	public void start()
 	{
-		
+		ShelterCats.needMoreCats();
 	}
 }
