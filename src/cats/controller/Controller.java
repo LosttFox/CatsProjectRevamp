@@ -4,14 +4,15 @@ import cats.model.ShelterCats;
 
 public class Controller
 {
+	ShelterCats cats;
 	
 	public Controller()
 	{
-		
+		this.cats = new ShelterCats();
 	}
 	
 	public void start()
 	{
-		ShelterCats.needMoreCats();
+		cats.ShelterCatsProgram();
 	}
 }

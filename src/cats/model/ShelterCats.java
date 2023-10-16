@@ -6,17 +6,22 @@ import cats.view.Popup;
 
 public class ShelterCats
 {
-	private static int response;
-	
 	public ShelterCats()
 	{
 		
 	}
 	
-	public static void needMoreCats()
+	public void ShelterCatsProgram()
 	{
-		response = Popup.askYesNoQuestion("More cats?");
-		
+		needMoreCats();
+	}
+	
+	private void needMoreCats()
+	{
+		int response;
+		int catCount = 100;
+		Popup popup = new Popup();
+		response = popup.askYesNoQuestion("More cats?");
 		
 		if (response == 1) // 1 is no
 		{
@@ -24,11 +29,12 @@ public class ShelterCats
 		}
 		else if (response == 0) // 0 is yes
 		{
-			JOptionPane.showMessageDialog(null, response);
+			catCount = Integer.parseInt(popup.askInputQuestion("How many cats?"));
 		}
 		else
 		{
 			JOptionPane.showInputDialog(null, "How did you get here?");
 		}
 	}
+	
 }
