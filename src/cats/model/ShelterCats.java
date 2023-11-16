@@ -10,7 +10,7 @@ public class ShelterCats
 	
 	public ShelterCats()
 	{
-		Popup popup = new Popup();
+		
 	}
 	
 	public void ShelterCatsProgram()
